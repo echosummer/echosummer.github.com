@@ -1,5 +1,4 @@
 echosummer.github.com
 =====================
 
-github web testing
-testing
+blogs and test fields
