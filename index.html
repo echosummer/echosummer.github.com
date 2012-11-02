@@ -1,11 +1,29 @@
 ---
 layout: default
+title: home
 ---
-<section>
-<img src="img/banner.jpg" />
-</section>
-<section class="content">
-<p>
-Welcome to the homepage~~lots of photos here
-</p>
-</section>
+<div id="homeL" class="mainL">
+<h2>Latest Photos Here<span class="line"></span></h2>
+	<div class="content">
+		<a href="#"><img src="img/banner.jpg" width="559" height="237" /></a>
+	</div>
+	<h2>Latest Blogs Here<span class="line"></span></h2>
+	<div class="content clearfix">
+		{% for post in site.posts limit:1 %}
+		<div class="blog_item">
+			<h3 class="clearfix"><a href="{{post.url}}">{{post.title}}</a><span>{{ post.date | date:"%Y-%m-%d" }}</span><span>#{{post.tags | join:"&nbsp;"}}</span></h3>
+			<p class="cxt">
+				{{ post.summary }}
+				... <a class="allcxt" href="{{post.url}}">more+</a>
+			</p>
+		</div>
+		{% endfor %}
+		<div class="horiline"></div>
+		
+		{% for post in site.posts limit:3 %}
+		<h3><a href="post.url">{{post.title}} <span>#{{ post.date | date:"%Y-%m-%d" }}</span><span>#{{post.tags | join:"&nbsp;"}}</span></a></h3>
+		{% endfor %}
+		
+		<a class="more" href="/blog/">more+</a>
+	</div>
+</div>
