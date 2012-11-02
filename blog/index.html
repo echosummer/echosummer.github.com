@@ -1,0 +1,18 @@
+---
+layout: default
+title: blogs
+---
+<div id="blogL" class="mainL">
+<h2>Latest Photos Here<span class="line"></span></h2>
+<div class="content blogs">
+	{% for post in paginator.posts %}
+	<div class="blog_item">
+		<h3 class="clearfix"><a href="{{post.url}}">{{post.title}}</a><span>{{ post.date | date:"%Y-%m-%d"}}</span><span>#{{ post.tags | join:"&nbsp;" }}</span></h3>
+		<p class="cxt">
+			{{ post.summary }}
+			... <a class="allcxt" href="{{post.url}}">more+</a>
+		</p>
+	</div>
+	{%  endfor  %}
+</div>
+</div>
