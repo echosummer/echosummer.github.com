@@ -2,31 +2,58 @@
 <html>
 <head>
   <meta charset=utf-8 />
-  <title> {% if page.title %} {{ page.title }} | {% endif %} John Doe, Photographer </title>
+  <title> 回夏山小村庄 | echosummer Vally </title>
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
- 
-  <div id="main">
-    <header>
-      <h1> John Doe Photograghy </h1>
-    <header>
- 
-    <nav role="navigation">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/portfolio/">Portfolio</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
+	<div class="top">
+		<div class="info_bar">
+	  		<header>
+	      		<h1> 回夏山小村庄 </h1>
+	    	</header>
+	    	<div class="area_block"></div>
+	    	<!--  右栏信息  -->
+	 		<div class="mainR">
+	 			<h2>Info Here<span class="line"></span></h2>
+	 			<div class="content ps_info">
+	 				<img class="pic" src="/img/banner.jpg" width="155" height="125" />
+	 				<p>Echosummer</p>
+	 				<p>Working: @nuomi</p>
+	 				<p>School: SYSU</p>
+	 			</div>
+	 			<h2>Cload Tags<span class="line"></span></h2>
+	 			<div class="content cloud_tag">
+	 				{% for tag in site.tags %}
+	 					<span>{{ tag[0] }}</span>
+	 				{% endfor %}
+	 			</div>
+	 			<h2><span class="line"></span></h2>
+	 			<div class="content other">
+	 				<a href="#">RSS</a>
+	 			</div>
+	 		</div>
+	 		<!--  右栏信息 结束 -->
+	 	</div>
+	</div>
+ 	<div class="main_area clearfix">
+ 			<div class="inner_con">
+ 				<!--  左栏信息  -->
+ 				
+ 					{{content}} 
+ 				<!--  左栏信息 结束  -->
+ 			</div> 
+ 	</div> 
+ 	<nav role="navigation">
+      <ul class="nav" >
+        <li><a id="home" href="/">Home</a></li>
+        <li><a id="blogs"  href="/blog/">Blogs</a></li>
+        <li><a id="gallery"  href="/gallery/">Gallery</a></li>
+        <li><a id="about" href="/about.html">About</a></li>
       </ul>
     </nav>
- 
-    {{ content }}
- 
     <footer>
-      <p>@copy; John Doe Photography 2011 | All Rights Reserved. </p>
+      <p>@copy 2012 echosummer , based on Jekyll </p>
     </footer>
  
-  </div>
 </body>
 </html>
