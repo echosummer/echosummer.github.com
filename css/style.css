@@ -102,3 +102,16 @@ footer p {height: 14px;line-height: 14px;text-align:center;
 .gallery .photo_item h3 a {display:inline-block;}
 .gallery .photo_item h3 a:hover {background-color: #ec870e;}
 .gallery .photo_item span {float: right;color: #fff;font-weight: normal;padding: 0 10px;}
+
+/* pagination */
+.pagination {padding-top:15px;margin-bottom:15px;text-align:center;}
+.pagination p {width:60px;height:20px;display:inline-block;
+	line-height:20px;text-align:center;background-color:#fff;}
+.pagination p.previous a,.pagination p.next a {color:#C9C9C9;}
+.pagination p.previous_disabled span,.pagination p.next_disabled span{color:#D7D7D7;}
+.pagination ul  {display:inline-block;padding:0 10px;}
+.pagination ul li {display:inline-block;width:20px;height:20px;
+	line-height:20px;color:#fff;}
+.pagination ul li a {color:#fff;}
+.pagination ul li .current_page {color:#FC9;}
+.pagination ul li a:hover{color:#FC9;}
