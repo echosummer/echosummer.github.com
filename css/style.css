@@ -115,3 +115,18 @@ footer p {height: 14px;line-height: 14px;text-align:center;
 .pagination ul li a {color:#fff;}
 .pagination ul li .current_page {color:#FC9;}
 .pagination ul li a:hover{color:#FC9;}
+
+/* pager */
+.pager {
+margin: 0 !important;
+list-style: none;
+text-align: center;}
+
+.pager .previous a {float: left;
+}
+.pager a, .pager span {color: white;margin: 5px 0 10px;
+	font-weight: bold;background-color: #FC9;padding:5px 10px;}
+.pager a:hover, .pager span:hover {background-color: #EC870E;}
+.pager .next a, .pager .next span {
+float: right;
+}
